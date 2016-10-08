@@ -18,6 +18,8 @@ interface GeneralDAO
 	public function select(string $columns):GeneralDAO;
 	public function where($data, $sep = 'AND'):GeneralDAO;
 	public function from(string $table):GeneralDAO;
+	public function orderBy(string $fieldName):GeneralDAO;
+	public function innerJoin(string $joinTable, string $data):GeneralDAO;
 	public function execute():bool;
 	public function fetchAll():array;
 	public function fetchRow();
